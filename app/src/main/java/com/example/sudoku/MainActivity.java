@@ -11,8 +11,12 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
+
+
+    // TODO Playbutton einbauen
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        // TODO Style ändern
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,6 +33,12 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        // editText zuweisen
+        EditText editText = findViewById(R.id.editTextName);
+
+        // TODO Testen was toString genau liefert...
+        // TODO Name speichern um den Spielstand und Score zuzuprdnen
+        String s = editText.toString();
     }
 
     @Override
